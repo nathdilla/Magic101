@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class MagicDriver
 {
     public static void main(String[] args)
@@ -9,6 +11,19 @@ public class MagicDriver
         Monster nothing = new Monster();
         Slime joe = new Slime("Joe", 12, true, 2);
         Slime noone = new Slime();
+
+        ArrayList<Enemy> enemyArrayList = new ArrayList<>();
+        enemyArrayList.add(happy);
+        enemyArrayList.add(nobody);
+        enemyArrayList.add(ogre);
+        enemyArrayList.add(nothing);
+
+        System.out.printf("Watch out, there are %d enemies attacking! %n%n", Enemy.countEnemies);
+
+        for (int i = 0; i < enemyArrayList.size(); i++)
+        {
+            System.out.println(enemyArrayList.get(i));
+        }
         //print object toString
         System.out.println(happy.toString());
         System.out.println(nobody.toString());

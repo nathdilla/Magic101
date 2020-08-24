@@ -2,12 +2,14 @@ public abstract class Enemy {
     String name;
     int might;
     boolean isHostile;
+    static int countEnemies = 0;
 
     public Enemy(String name, int might, boolean isHostile)
     {
         this.name = name;
         this.might = might;
         this.isHostile = isHostile;
+        countEnemies++;
     }
 
     public Enemy()
@@ -15,6 +17,7 @@ public abstract class Enemy {
         this.name = null;
         might = 0;
         isHostile = true;
+        countEnemies++;
     }//end null construc
 
     public String getName() {
