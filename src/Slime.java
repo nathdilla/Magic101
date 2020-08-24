@@ -16,6 +16,10 @@ public class Slime extends Enemy{
         this.size = 5;
     }//end null construc
 
+    public void setSize(int size) {
+        this.size = validateSize(size);
+    }
+
     public String sizeReact()
     {
         if (size <= 5)

@@ -19,6 +19,14 @@ public class Dragon extends Enemy{
         this.wingSpan = 0;
     }//end null construc
 
+    public void setWingSpan(double wingSpan) {
+        this.wingSpan = validateWingSpan(wingSpan);
+    }
+
+    public double getWingSpan() {
+        return wingSpan;
+    }
+
     public double validateWingSpan (double wingSpan)
     {
         while (wingSpan < 0)

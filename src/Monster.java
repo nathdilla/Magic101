@@ -1,20 +1,17 @@
 public class Monster extends Enemy{
     //inst. var
-    int regenAmt;
     String terrain;
 
     //construc
-    public Monster(String dragonName, int might, boolean isHostile, String terrain,   int regenAmt)
+    public Monster(String dragonName, int might, boolean isHostile, String terrain)
     {
         super(dragonName,might,isHostile);
-        this.regenAmt = regenAmt;
         this.terrain = terrain;
     }//end all construct
 
     public Monster()
     {
         super();
-        this.regenAmt = 5;
         this.terrain = "land";
     }//end null construc;
 
@@ -52,7 +49,7 @@ public class Monster extends Enemy{
 
     @Override
     public String toString() {
-        return super.toString() + "\n regenAmt : " + regenAmt
+        return super.toString()
                 + "\n terrain : " + terrain;
     }
 }
