@@ -7,7 +7,7 @@ public class Slime extends Enemy{
     public Slime(String dragonName, int might, boolean isHostile, int size)
     {
         super(dragonName,might,isHostile);
-        this.size = size;
+        this.size = validateSize(size);
     }//end all construct
 
     public Slime()
@@ -16,30 +16,31 @@ public class Slime extends Enemy{
         this.size = 5;
     }//end null construc
 
-    //getters
-
-    public int getMight() {
-        return might;
+    public String sizeReact()
+    {
+        if (size <= 5)
+        {
+            return "I am puny";
+        }
+        else if (size > 5 && size <=10)
+        {
+            return "I am a possible threat.";
+        }
+        else
+        {
+            return "I am a HUGE threat. Run away while you can.";
+        }
     }
 
-    public String getName() {
-        return name;
-    }
-
-
-    //setters
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setHostile(boolean hostile) {
-        isHostile = hostile;
-    }
-
-    public void setMight(int might) {
-        this.might = might;
-    }
+    public int validateSize (int size)
+    {
+        while (size < 0)
+        {
+            System.out.println("You can't have negative size. Try again.");
+            size++; //********delete later when user input
+        }
+        return size;
+    }//end method validateWingSpan
     //toString **test output method
 
 

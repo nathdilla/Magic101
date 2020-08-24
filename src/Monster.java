@@ -4,42 +4,20 @@ public class Monster extends Enemy{
     String terrain;
 
     //construc
-    public Monster(String dragonName, int might, boolean isHostile,  int regenAmt)
+    public Monster(String dragonName, int might, boolean isHostile, String terrain,   int regenAmt)
     {
         super(dragonName,might,isHostile);
         this.regenAmt = regenAmt;
+        this.terrain = terrain;
     }//end all construct
 
     public Monster()
     {
         super();
         this.regenAmt = 5;
-    }//end null construc
+        this.terrain = "land";
+    }//end null construc;
 
-    //getters
-
-    public int getMight() {
-        return might;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-
-    //setters
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setHostile(boolean hostile) {
-        isHostile = hostile;
-    }
-
-    public void setMight(int might) {
-        this.might = might;
-    }
     //toString **test output method
 
     public String mightReact()
@@ -58,11 +36,23 @@ public class Monster extends Enemy{
 
     public String compareTerrain()
     {
-        return null;
+        if (terrain.equalsIgnoreCase("land"))
+        {
+            return "You can run away";
+        }
+        else if (terrain.equalsIgnoreCase("water"))
+        {
+            return "You can swim away";
+        }
+        else
+            {
+            return "Bummer for you!";
+        }
     }
 
     @Override
     public String toString() {
-        return super.toString() + "\n regenAmt : " + regenAmt;
+        return super.toString() + "\n regenAmt : " + regenAmt
+                + "\n terrain : " + terrain;
     }
 }

@@ -17,6 +17,22 @@ public abstract class Enemy {
         isHostile = true;
     }//end null construc
 
+    public String getName() {
+        return name;
+    }
+
+    public int getMight() {
+        return might;
+    }
+
+    public void setMight(int might) {
+        this.might = might;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "Enemy{" +

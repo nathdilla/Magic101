@@ -19,31 +19,6 @@ public class Dragon extends Enemy{
         this.wingSpan = 0;
     }//end null construc
 
-    //getters
-
-    public int getMight() {
-        return might;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-
-    //setters
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setHostile(boolean hostile) {
-        isHostile = hostile;
-    }
-
-    public void setMight(int might) {
-        this.might = might;
-    }
-
     public double validateWingSpan (double wingSpan)
     {
         while (wingSpan < 0)
