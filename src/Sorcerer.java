@@ -84,9 +84,10 @@ public class Sorcerer {
         }
     }
 
-    public String strike(int might)
+    public String strike(int reactionTime)
     {
-        if (might < 5)
+        int force = reactionTime * might;
+        if (force < 20)
         {
             return spell + " was not effective!";
         }

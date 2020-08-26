@@ -11,6 +11,8 @@ public class MagicDriver
         Monster nothing = new Monster();
         Slime joe = new Slime("Joe", 12, true, 2);
         Slime noone = new Slime();
+        Sorcerer apprentice = new Sorcerer("apprentice", 7, 16, "vanish", false);
+        Sorcerer who = new Sorcerer();
 
         ArrayList<Enemy> enemyArrayList = new ArrayList<>();
         enemyArrayList.add(happy);
@@ -20,13 +22,14 @@ public class MagicDriver
 
         System.out.printf("Watch out, there are %d enemies attacking! %n%n", Enemy.countEnemies);
 
+        //print object toString
         for (int i = 0; i < enemyArrayList.size(); i++)
         {
             System.out.println(enemyArrayList.get(i));
         }
-        //print object toString
-        System.out.println(happy.toString());
-        System.out.println(nobody.toString());
+
+        System.out.println(apprentice.toString());
+        System.out.println(who.toString());
 
         nobody.setWingSpan(-2);
         System.out.println(nobody.toString());
@@ -40,5 +43,15 @@ public class MagicDriver
         System.out.println(joe.sizeReact());
         joe.setSize(23);
         System.out.println(joe.sizeReact());
+
+        System.out.println(happy.shootFire(2));
+        System.out.println(happy.shootFire(20));
+
+        System.out.println(apprentice.strike(1));
+        System.out.println(apprentice.strike(6));
+
+        System.out.println("Ogre's might is " + ogre.getMight());
+        System.out.println("Happy's wing span is " + happy.getWingSpan());
+
     }//end main
 }//end driver class
