@@ -18,7 +18,7 @@ public class Dragon extends Enemy{
         this.hasFire = false;
         this.wingSpan = 0;
     }//end null construc
-
+//getters n setters
     public void setWingSpan(double wingSpan) {
         this.wingSpan = validateWingSpan(wingSpan);
     }
@@ -36,6 +36,25 @@ public class Dragon extends Enemy{
         }
         return wingSpan;
     }//end method validateWingSpan
+
+    public String shootFire(int distance)
+    {
+        if (hasFire == true)
+        {
+            if (distance < 50)
+            {
+                return "You got burned!";
+            }
+            else
+            {
+                return "Miss-fire!";
+            }
+        }
+        else
+        {
+            return "I have no fire!";
+        }
+    }
 
     //toString **test output method
 

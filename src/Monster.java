@@ -15,6 +15,16 @@ public class Monster extends Enemy{
         this.terrain = "land";
     }//end null construc;
 
+    //getters n setters
+
+    public String getTerrain() {
+        return terrain;
+    }
+
+    public void setTerrain(String terrain) {
+        this.terrain = terrain;
+    }
+
     //toString **test output method
 
     public String mightReact()
